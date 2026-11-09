@@ -3,7 +3,7 @@ MAIJ DOCUMENT IDENTIFIER: REG-MAIJ-DOC-001
 TITLE: MAIJ Master Document Register
 CATEGORY: Summaries & Registers
 EFFECTIVE DATE: 2026-11-09
-VERSION: 1.0 (Draft)
+VERSION: 1.1 (Draft)
 OWNER: MAIJ Operations
 STATUS: DRAFT — FOR INTERNAL USE
 SUMMARY: The authoritative master index of every document in the MAIJ repository, modeled on FAA order and manual registers, providing for each document its identifier, title, category, version, status, owner, location, and a new-administrator summary.
@@ -34,11 +34,11 @@ This register is the first document a **new administrator** should read. It inde
 | IGD-MAIJ-IT-003 | Pop!_OS 24.04 LTS (NVIDIA) Setup Guide | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/pop_os_setup_guide.md` |
 | PLN-MAIJ-UI-001 | Future Custom GUI Roadmap | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/custom_gui_roadmap.md` |
 | TOOL-MAIJ-IT-001 | Migration Audit & Backup Script (PowerShell) | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/migrate-to-linux.ps1` |
-| SKL-MAIJ-001 | Unified Roblox Game Architecture Skill | Skills & Automation | 1.0 | VALIDATED | `03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture/` |
-| SKL-MAIJ-001-A | Skill Package Archive | Skills & Automation | 1.0 | VALIDATED | `03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture.skill` |
-| REG-MAIJ-DOC-001 | Master Document Register (this document) | Summaries & Registers | 1.0 | DRAFT | `04_SUMMARIES_AND_REGISTERS/DOCUMENT_REGISTER.md` |
-| CHG-MAIJ-001 | Changelog | Summaries & Registers | 1.0 | DRAFT | `04_SUMMARIES_AND_REGISTERS/CHANGELOG.md` |
-| MAN-MAIJ-OPS-001 | MAIJ Operations Manual | — | 1.0 | DRAFT | `README.md` |
+| SKL-MAIJ-001 | Unified Roblox Game Architecture Skill | Skills & Automation | 1.1 | VALIDATED | `03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture/` |
+| SKL-MAIJ-001-A | Skill Package Archive | Skills & Automation | 1.1 | VALIDATED | `03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture.skill` |
+| REG-MAIJ-DOC-001 | Master Document Register (this document) | Summaries & Registers | 1.1 | DRAFT | `04_SUMMARIES_AND_REGISTERS/DOCUMENT_REGISTER.md` |
+| CHG-MAIJ-001 | Changelog | Summaries & Registers | 1.1 | DRAFT | `04_SUMMARIES_AND_REGISTERS/CHANGELOG.md` |
+| MAN-MAIJ-OPS-001 | MAIJ Operations Manual | — | 1.1 | DRAFT | `README.md` |
 
 ---
 
@@ -78,7 +78,7 @@ This register is the first document a **new administrator** should read. It inde
 **Summary:** Automated PowerShell script that inventories installed apps with Linux compatibility tagging, categorizes user files, detects junk, stages MAIJ assets into the eleven categories on drive F:, and safely copies curated documents with Robocopy verification — all pure-ASCII, UTF-8-BOM, CRLF-safe for Windows PowerShell 5.1 and 7.
 
 ### SKL-MAIJ-001 — Unified Roblox Game Architecture Skill
-**Summary:** Reusable Manus skill codifying the unification process: seven-step workflow, flywheel wiring, the eleven-category taxonomy, build-order decision matrix, rate-formula toolkit, module-spec and master-plan templates, and the plan validator. Validated under official skill-creator rules.
+**Summary:** Reusable Manus skill codifying the unification process: nine-step workflow, flywheel wiring, eleven-category taxonomy, build-order decision matrix, rate-formula toolkit, module-spec and master-plan templates, the plan validator, a cadence playbook derived from the founder's weekly Soul Vault library development cadence, and a verified founder context corpus with sourced MAIJ mission wording, drone economics, FAA rules, and NC geography. Validated under official skill-creator rules.
 
 ---
 

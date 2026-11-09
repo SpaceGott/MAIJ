@@ -3,7 +3,7 @@ MAIJ DOCUMENT IDENTIFIER: MAN-MAIJ-OPS-001
 TITLE: MAIJ Operations Manual — Master Index & Administrator Guide
 CATEGORY: Operations Manual
 EFFECTIVE DATE: 2026-11-09
-VERSION: 1.0 (Draft)
+VERSION: 1.1 (Draft)
 OWNER: MAIJ Operations
 STATUS: DRAFT — FOR INTERNAL USE
 SUMMARY: The FAA-manual-style master document of the MAIJ venture repository: purpose and scope, organizational structure, complete document index with summaries and identifiers, a new-administrator quick-start, compliance status, and the quarterly review cycle aligned with the CBYX calendar and FAA regulatory updates.
@@ -11,7 +11,7 @@ SUMMARY: The FAA-manual-style master document of the MAIJ venture repository: pu
 
 # MAIJ Operations Manual
 
-**Document:** MAN-MAIJ-OPS-001 · **Version:** 1.0 (Draft) · **Effective Date:** 9 November 2026
+**Document:** MAN-MAIJ-OPS-001 · **Version:** 1.1 (Draft) · **Effective Date:** 9 November 2026
 **Organization:** MAIJ (autonomous drone freight — small NC farms to NC restaurants)
 **Repository:** `https://github.com/SpaceGott/MAIJ` — folder `maij/`
 **Classification:** Internal working documents — FAA-style structure
@@ -55,14 +55,14 @@ If you are **setting up a workstation**: follow [IGD-MAIJ-IT-003 (Pop!_OS Setup)
 | **IGD-MAIJ-IT-003** | Pop!_OS (NVIDIA) Setup | Chosen GUI: NVIDIA ISO, Vinegar/Studio, toolchain | [link](02_MIGRATION_AND_INFRASTRUCTURE/pop_os_setup_guide.md) |
 | **PLN-MAIJ-UI-001** | Custom GUI Roadmap | Tauri MVP → libcosmic workstation → flight-ops shell | [link](02_MIGRATION_AND_INFRASTRUCTURE/custom_gui_roadmap.md) |
 | **TOOL-MAIJ-IT-001** | Migration Script | PowerShell audit and safe copy to drive F: | [link](02_MIGRATION_AND_INFRASTRUCTURE/migrate-to-linux.ps1) |
-| **SKL-MAIJ-001** | Roblox Skill | Reusable unification skill with validator | [link](03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture/SKILL.md) |
+| **SKL-MAIJ-001** | Roblox Skill | Reusable unification skill with cadence playbook and verified founder context | [link](03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture/SKILL.md) |
 | **REG-MAIJ-DOC-001** | Document Register | Full metadata for every document | [link](04_SUMMARIES_AND_REGISTERS/DOCUMENT_REGISTER.md) |
 | **CHG-MAIJ-001** | Changelog | Revision history | [link](04_SUMMARIES_AND_REGISTERS/CHANGELOG.md) |
 
 ## 5. Compliance and Status Summary
 
-* **All documents at Version 1.0 (Draft)** — suitable for internal operations; formal sign-off after the Q1 2027 entity formation.
-* **Skill SKL-MAIJ-001 is VALIDATED** under the official skill-creator test suite.
+* **All documents at Version 1.0–1.1 (Draft)** — suitable for internal operations; formal sign-off after the Q1 2027 entity formation.
+* **Skill SKL-MAIJ-001 is VALIDATED (v1.1)** under the official skill-creator test suite with the full founder context corpus.
 * **Tool TOOL-MAIJ-IT-001 is fixed and verified** (encoding, parser, HTML generation).
 * **Next scheduled review:** February 2027 (end of CBYX fall term).
 

@@ -1,11 +1,11 @@
 ---
 name: unified-roblox-game-architecture
-description: "Unify separate concepts — learning interactions, regional logistics, rate mathematics, and full-store economy simulation — into one cohesive Roblox game, with an 11-category folder taxonomy whose modules feed each other. Use when: designing a multi-concept Roblox simulation game, choosing between micro-to-macro and macro-to-micro build orders, allocating asset and telemetry folders that cross-support game modules, or formalizing flywheels and data contracts between game systems."
+description: "Unify separate concepts — learning interactions, regional logistics, rate mathematics, and full-store economy simulation — into one cohesive Roblox game, with an 11-category folder taxonomy whose modules feed each other, a weekly bounded-task cadence playbook, and a full MAIJ founder context corpus. Use when: designing a multi-concept Roblox simulation game, choosing between micro-to-macro and macro-to-micro build orders, allocating asset and telemetry folders that cross-support game modules, formalizing flywheels and data contracts between game systems, or grounding plans in verified MAIJ mission, economics, regulatory, and NC geography facts."
 ---
 
 # Unified Roblox Game Architecture
 
-This skill guides the design of multi-concept Roblox simulation games by turning separate concepts (education, logistics, economics, retail) into one integrated world where every module's outputs become another module's inputs, supported by a shared asset and telemetry folder taxonomy.
+This skill guides the design of multi-concept Roblox simulation games by turning separate concepts (education, logistics, economics, retail) into one integrated world where every module's outputs become another module's inputs, supported by a shared asset and telemetry folder taxonomy, a proven weekly execution cadence, and a verified founder context corpus.
 
 ## When to Use
 
@@ -13,6 +13,7 @@ This skill guides the design of multi-concept Roblox simulation games by turning
 * You need to decide the build order: **micro-to-macro** (inside-out, measurement-first) versus **macro-to-micro** (outside-in, flagship-first).
 * You need a deterministic folder structure on an external drive or repository so assets, datasets, formulas, and telemetry cross-support every game module.
 * You need to define flywheels, data contracts, and definition-of-done criteria between modules.
+* You are writing any MAIJ-related plan, pitch, or simulation document and need the verified facts (mission wording, drone economics, FAA rules, NC geography).
 
 ## Core Workflow
 
@@ -62,7 +63,15 @@ Never store institutional or student data inside game categories.
 
 For delivery and economy modules, read `references/rate-formula-toolkit.md` and embed the six model suite: per-delivery cost, drone energy with wind, perishable decay with the cold-chain constraint, break-even comparison against ground delivery, VRPTW routing, and rate policy. Label every coefficient sourced (with URL) or assumed, and ship the suite as a tested Python module before in-game use.
 
-### Step 7: Validate and Deliver the Plan
+### Step 7: Ground Plans in the Verified Context
+
+Read `references/founder-context-maij.md` for the verified factual corpus (mission wording, drone economics, FAA Part 107/135/108 rules, NC food-safety law, education pipeline ethics, Pop!_OS/COSMIC GUI decision).
+
+### Step 8: Run the Weekly Cadence Playbook
+
+Read `references/cadence-patterns.md` and adopt the weekly bounded-task pattern ("Execute the next [Module] roadmap week"), the G0-style evidence gates, modular sequencing (economy → role mechanics → non-gameplay → meta-loop), and the definition-of-done checklist.
+
+### Step 9: Validate and Deliver the Plan
 
 Run the validator on the completed plan:
 
@@ -78,6 +87,8 @@ Fix any missing required sections, isolated flywheels, or undeclared build order
 * `references/decision-matrix.md` — micro-to-macro versus macro-to-micro selection rules
 * `references/folder-taxonomy-pattern.md` — 11-category specification, flywheel matrix, lifecycle rules
 * `references/rate-formula-toolkit.md` — reusable formula suite with provenance discipline
+* `references/founder-context-maij.md` — verified factual corpus for MAIJ documents
+* `references/cadence-patterns.md` — weekly execution cadence and evidence-gate patterns
 * `templates/module-spec-template.md` — per-module specification
 * `templates/game-architecture-plan-template.md` — master architecture document template
 
