@@ -30,7 +30,7 @@ This register is the first document a **new administrator** should read. It inde
 | SMS-MAIJ-001 | Safety Management System Manual (skeleton) | Regulatory Framework | 1.0 | DRAFT | `00_REGULATORY_FRAMEWORK/safety_management_system.md` |
 | PLN-MAIJ-STR-001 | Micro-Term Roadmap: Language Game → Costlo | Strategy & Roadmaps | 1.1 | DRAFT | `01_STRATEGY_AND_ROADMAPS/maij_microterm_roadmap.md` |
 | PLN-MAIJ-DATA-001 | Asset Inventory Plan & Data Strategy | Strategy & Roadmaps | 1.1 | DRAFT | `01_STRATEGY_AND_ROADMAPS/maij_training_asset_inventory_plan.md` |
-| PLN-MAIJ-IT-001 | File-Filtering & Cleanup Strategy | Strategy & Roadmaps | 1.0 | DRAFT | `01_STRATEGY_AND_ROADMAPS/file_filtering_and_cleanup_strategy.md` |
+| PLN-MAIJ-IT-001 | File-Filtering & Cleanup Strategy | Strategy & Roadmaps | 1.1 | DRAFT | `01_STRATEGY_AND_ROADMAPS/file_filtering_and_cleanup_strategy.md` |
 | PLN-MAIJ-OPS-001 | Network & Route Operations Plan | Strategy & Roadmaps | 1.0 | DRAFT | `01_STRATEGY_AND_ROADMAPS/maij_network_and_route_operations_plan.md` |
 | IGD-MAIJ-IT-001 | Windows-to-Linux Migration Guide | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/windows_to_linux_migration_guide.md` |
 | IGD-MAIJ-IT-002 | Ubuntu 24.04 LTS Dual-Boot Guide | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/ubuntu_installation_guide.md` |
@@ -75,7 +75,7 @@ This register is the first document a **new administrator** should read. It inde
 **Summary:** 11-category taxonomy, short/long-term gap analysis against the dual mission, milestone data priorities.
 
 ### PLN-MAIJ-IT-001 — File-Filtering Strategy
-**Summary:** KEEP/SKIP rules, OneDrive cautions, drive F: layout.
+**Summary:** KEEP/SKIP rules, OneDrive cautions, Downloads current-year document preservation, and the drive F: staging layout.
 
 ### PLN-MAIJ-OPS-001 — Network & Route Operations Plan
 **Summary:** German-train ICE/RE/S-Bahn network, simulated-AI-vector scheduling, farm criteria, vertipad/grid requirements.

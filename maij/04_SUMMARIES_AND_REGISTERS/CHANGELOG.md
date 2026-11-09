@@ -1,5 +1,10 @@
 # MAIJ Documentation — Changelog
 
+## 2026-11-09 — Downloads current-year document safeguard
+
+* TOOL-MAIJ-IT-001 (`migrate-to-linux.ps1`) now scans Downloads for current-year (2026) documents and stages them into a dedicated `Recent_Downloads_2026/` folder on drive F:, with a dedicated report section and CSV.
+* PLN-MAIJ-IT-001 updated to v1.1 documenting the Downloads KEEP rule (documents kept, installer packages skipped).
+
 Document identifier: **CHG-MAIJ-001** · Version 1.2 (Draft) · 2026-11-09
 
 ## 2026-11-09 — Part 135 Compliance Frameworks & Network Plan (v1.2)

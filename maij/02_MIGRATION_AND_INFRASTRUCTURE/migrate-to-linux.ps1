@@ -30,7 +30,8 @@ param(
     [string]$Mode = "Audit",
     [string]$Source = $env:USERPROFILE,
     [string[]]$ExtraFolders = @("C:\blu-k2-port"),
-    [int]$InstallerAgeDays = 60
+    [int]$InstallerAgeDays = 60,
+    [int]$RecentDocYear = 2026
 )
 
 $ErrorActionPreference = "Continue"
@@ -330,6 +331,23 @@ if (Test-Path $downloads) {
     $oldInst | Select-Object FullName, Length, LastWriteTime | Export-Csv -Path (Join-Path $reportsFolder "junk_old_installers.csv") -NoTypeInformation -Encoding utf8
 }
 
+# Recent documents in Downloads (year-scoped safeguard)
+$recentDownloads = @()
+if (Test-Path $downloads) {
+    $nonDocExt = @(".exe",".msi",".iso",".tmp",".crdownload",".part","")
+    $recentDownloads = Get-ChildItem -Path $downloads -Recurse -File -Force -ErrorAction SilentlyContinue |
+        Where-Object {
+            $ext = $_.Extension.ToLower()
+            $ext -notin $nonDocExt -and ($_.LastWriteTime.Year -ge $RecentDocYear -or $_.Name -match [regex]::Escape((string)$RecentDocYear))
+        } | Select-Object FullName, Name, Extension, Length, LastWriteTime,
+            @{N='SizeMB';E={ [math]::Round($_.Length/1MB, 2) }},
+            @{N='Category';E={ Get-Category $_.Extension }}
+    $recentDownloads | Export-Csv -Path (Join-Path $reportsFolder "downloads_recent_documents_$RecentDocYear.csv") -NoTypeInformation -Encoding utf8
+    $rdCount = $recentDownloads.Count
+    $rdMB = [math]::Round((($recentDownloads | Measure-Object Length -Sum).Sum)/1MB, 1)
+    Write-Host "  Recent documents in Downloads ($RecentDocYear): $rdCount files (~${rdMB} MB) staged for dedicated transfer" -ForegroundColor Yellow
+}
+
 # node_modules
 $nm = Get-ChildItem -Path $Source -Directory -Recurse -Force -Filter "node_modules" -ErrorAction SilentlyContinue |
     Where-Object { $_.FullName -notmatch "\.(vscode|cache)" }
@@ -468,6 +486,26 @@ if ($Mode -eq "Copy") {
     }
     Write-Host "  Documents copy complete. Logs in $reportsFolder" -ForegroundColor Green
 
+    # 6c. Copy recent year-scoped documents from Downloads into a dedicated folder
+    if ($recentDownloads -and $recentDownloads.Count -gt 0) {
+        $recentTarget = Join-Path $outDir "Recent_Downloads_$RecentDocYear"
+        New-Item -ItemType Directory -Path $recentTarget -Force | Out-Null
+        $rdLog = @()
+        foreach ($r in $recentDownloads) {
+            $dest = Join-Path $recentTarget $r.Name
+            if (Test-Path $dest) { $dest = Join-Path $recentTarget (([guid]::NewGuid().ToString().Substring(0,6)) + "_" + $r.Name) }
+            try {
+                Copy-Item -LiteralPath $r.FullName -Destination $dest -Force -ErrorAction Stop
+                $rdLog += [PSCustomObject]@{ Source = $r.FullName; Destination = $dest; Status = "OK" }
+            } catch {
+                $rdLog += [PSCustomObject]@{ Source = $r.FullName; Destination = $dest; Status = "FAILED: $_" }
+            }
+        }
+        $rdLog | Export-Csv -Path (Join-Path $reportsFolder "downloads_recent_copy_log.csv") -NoTypeInformation -Encoding utf8
+        $rdOK = ($rdLog | Where-Object Status -eq "OK").Count
+        Write-Host "  Recent Downloads ($RecentDocYear) staged: $rdOK / $($rdLog.Count) copied" -ForegroundColor Green
+    }
+
     # Write README on the drive
     $readme = @"
 # Windows-to-Linux Migration Backup
@@ -489,6 +527,7 @@ Source PC: $env:COMPUTERNAME ($env:OS, Windows $(([Environment]::OSVersion).Vers
   * Simulation_and_Hardware_Environments/ (pre-created for Gazebo/PX4/calibrations)
   * Telemetry_and_Operations_Data/ (pre-created for flight logs/cold-chain)
   * Model_Zoo_and_Benchmarks/ (pre-created for checkpoints/recipes)
+- Recent_Downloads_2026/        - Year-2026 documents recovered from Downloads
 - audit_reports/                - CSV reports of apps, files, and copy logs
 
 ## Before wiping Windows, verify:
@@ -518,6 +557,9 @@ $appRows = foreach ($a in ($inventory | Sort-Object LinuxStatus, AppName)) {
     '<tr><td>' + (Escape-Html $a.AppName) + '</td><td>' + (Escape-Html $a.Version) + '</td><td>' + (Escape-Html $a.Publisher) + '</td><td class="' + $cls + '">' + (Escape-Html $a.LinuxStatus) + '</td><td>' + (Escape-Html $a.LinuxAlternative) + '</td></tr>'
 }
 
+$recentRows = foreach ($r in $recentDownloads) {
+    '<tr><td>' + (Escape-Html $r.Name) + '</td><td>' + (Escape-Html $r.Extension) + '</td><td>' + (Escape-Html (Get-Date $r.LastWriteTime -Format "yyyy-MM-dd HH:mm")) + '</td><td>' + $r.SizeMB + '</td><td>' + (Escape-Html $r.Category) + '</td></tr>'
+}
 $catRows = foreach ($c in $catSummary) {
     '<tr><td>' + (Escape-Html $c.Category) + '</td><td>' + $c.FileCount + '</td><td>' + $c.TotalSizeMB + '</td><td>' + $c.TotalSizeGB + '</td></tr>'
 }
@@ -530,6 +572,7 @@ $maijRows = foreach ($m in $maijSummary) {
     '<tr><td>' + (Escape-Html $m.Category) + '</td><td>' + $m.Count + '</td><td>' + $m.SizeMB + '</td></tr>'
 }
 
+$recentTable = $recentRows -join "`r`n"
 $appTable  = $appRows  -join "`r`n"
 $catTable  = $catRows  -join "`r`n"
 $junkTable = $junkRows -join "`r`n"
@@ -547,8 +590,12 @@ code{background:#eee;padding:1px 5px}
 </style></head><body>
 <h1>Windows-to-Linux Migration Audit</h1>
 <p>Generated on $env:COMPUTERNAME &middot; $(Get-Date -Format "yyyy-MM-dd HH:mm") &middot; Mode: <b>$Mode</b></p>
-<div class='box'><b>Summary:</b> Scanned $grandCount files (~${grandGB} GB), $inventory.Count installed applications. Curated backup set: $($curated.Count) files (~${curatedGB} GB). Found $($maijWithCats.Count) MAIJ model-training assets.</div>
+<div class='box'><b>Summary:</b> Scanned $grandCount files (~${grandGB} GB), $inventory.Count installed applications. Curated backup set: $($curated.Count) files (~${curatedGB} GB). Found $($maijWithCats.Count) MAIJ model-training assets. Recent Downloads ($RecentDocYear): $($recentDownloads.Count) documents.</div>
 
+<h2>Recent Documents in Downloads ($RecentDocYear) -- marked for transfer</h2>
+<table><tr><th>File</th><th>Type</th><th>Last Modified</th><th>Size (MB)</th><th>Category</th></tr>
+$recentTable
+</table>
 <h2>Application Compatibility Review</h2>
 <table><tr><th>Application</th><th>Version</th><th>Publisher</th><th>Linux Status</th><th>Linux Alternative / Notes</th></tr>
 $appTable
