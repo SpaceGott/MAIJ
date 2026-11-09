@@ -3,7 +3,7 @@ MAIJ DOCUMENT IDENTIFIER: REG-MAIJ-DOC-001
 TITLE: MAIJ Master Document Register
 CATEGORY: Summaries & Registers
 EFFECTIVE DATE: 2026-11-09
-VERSION: 1.1 (Draft)
+VERSION: 1.2 (Draft)
 OWNER: MAIJ Operations
 STATUS: DRAFT — FOR INTERNAL USE
 SUMMARY: The authoritative master index of every document in the MAIJ repository, modeled on FAA order and manual registers, providing for each document its identifier, title, category, version, status, owner, location, and a new-administrator summary.
@@ -11,11 +11,9 @@ SUMMARY: The authoritative master index of every document in the MAIJ repository
 
 # MAIJ Master Document Register
 
-**Repository:** `SpaceGott/MAIJ` — folder `maij/`
-**Classification:** Draft — internal working documents
-**Review cycle:** quarterly, aligned with the CBYX calendar and FAA regulatory updates
+**Repository:** `SpaceGott/MAIJ` — folder `maij/` · **Classification:** Draft — internal working documents · **Review cycle:** quarterly, aligned with the CBYX calendar and FAA regulatory updates
 
-This register is the first document a **new administrator** should read. It indexes every file generated for the MAIJ venture during the November 2026 planning and migration sessions. Documents follow an FAA-style identifier convention: **SOP** (standard operating procedure), **AD** (administrative directive), **GAP** (gap/risk register), **PLN** (plan), **IGD** (installation guide), **TOOL** (executable tool), **SKL** (reusable skill), **REG** (register), **MAN** (manual), **CHG** (changelog).
+This register is the first document a **new administrator** should read. It indexes every file generated for the MAIJ venture during the November 2026 planning and migration sessions. Documents follow an FAA-style identifier convention: **SOP** (standard operating procedure), **AD** (administrative directive), **GAP** (gap/risk register), **PLN** (plan), **IGD** (installation guide), **TOOL** (executable tool), **SKL** (reusable skill), **REG** (register), **MAN** (manual), **CHG** (changelog), **CAMP** (continuous airworthiness maintenance program), **TRN** (training syllabus), **SMS** (safety management system).
 
 ---
 
@@ -26,65 +24,73 @@ This register is the first document a **new administrator** should read. It inde
 | SOP-MAIJ-CC-001 | Cold-Chain Standard Operating Procedure | Regulatory Framework | 1.0 | DRAFT | `00_REGULATORY_FRAMEWORK/maij_cold_chain_sop.md` |
 | AD-MAIJ-BUS-001 | NC Entity Formation & Business Foundations Guide | Regulatory Framework | 1.0 | DRAFT | `00_REGULATORY_FRAMEWORK/maij_entity_formation_guide.md` |
 | GAP-MAIJ-2026-001 | One-Year Overlooked-Items & Risk Register | Regulatory Framework | 1.0 | DRAFT | `00_REGULATORY_FRAMEWORK/maij_one_year_overlooked_audit.md` |
-| PLN-MAIJ-STR-001 | Micro-Term Roadmap: Language Game → Costlo | Strategy & Roadmaps | 1.0 | DRAFT | `01_STRATEGY_AND_ROADMAPS/maij_microterm_roadmap.md` |
-| PLN-MAIJ-DATA-001 | Asset Inventory Plan & Data Strategy | Strategy & Roadmaps | 1.0 | DRAFT | `01_STRATEGY_AND_ROADMAPS/maij_training_asset_inventory_plan.md` |
+| MAN-MAIJ-OPS-002 | Flight Operations Manual (skeleton) | Regulatory Framework | 1.0 | DRAFT | `00_REGULATORY_FRAMEWORK/flight_operations_manual.md` |
+| CAMP-MAIJ-001 | Maintenance Program (skeleton) | Regulatory Framework | 1.0 | DRAFT | `00_REGULATORY_FRAMEWORK/maintenance_program.md` |
+| TRN-MAIJ-001 | Training Syllabus (skeleton) | Regulatory Framework | 1.0 | DRAFT | `00_REGULATORY_FRAMEWORK/training_syllabus.md` |
+| SMS-MAIJ-001 | Safety Management System Manual (skeleton) | Regulatory Framework | 1.0 | DRAFT | `00_REGULATORY_FRAMEWORK/safety_management_system.md` |
+| PLN-MAIJ-STR-001 | Micro-Term Roadmap: Language Game → Costlo | Strategy & Roadmaps | 1.1 | DRAFT | `01_STRATEGY_AND_ROADMAPS/maij_microterm_roadmap.md` |
+| PLN-MAIJ-DATA-001 | Asset Inventory Plan & Data Strategy | Strategy & Roadmaps | 1.1 | DRAFT | `01_STRATEGY_AND_ROADMAPS/maij_training_asset_inventory_plan.md` |
 | PLN-MAIJ-IT-001 | File-Filtering & Cleanup Strategy | Strategy & Roadmaps | 1.0 | DRAFT | `01_STRATEGY_AND_ROADMAPS/file_filtering_and_cleanup_strategy.md` |
+| PLN-MAIJ-OPS-001 | Network & Route Operations Plan | Strategy & Roadmaps | 1.0 | DRAFT | `01_STRATEGY_AND_ROADMAPS/maij_network_and_route_operations_plan.md` |
 | IGD-MAIJ-IT-001 | Windows-to-Linux Migration Guide | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/windows_to_linux_migration_guide.md` |
 | IGD-MAIJ-IT-002 | Ubuntu 24.04 LTS Dual-Boot Guide | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/ubuntu_installation_guide.md` |
 | IGD-MAIJ-IT-003 | Pop!_OS 24.04 LTS (NVIDIA) Setup Guide | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/pop_os_setup_guide.md` |
 | PLN-MAIJ-UI-001 | Future Custom GUI Roadmap | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/custom_gui_roadmap.md` |
 | TOOL-MAIJ-IT-001 | Migration Audit & Backup Script (PowerShell) | Migration & Infrastructure | 1.0 | DRAFT | `02_MIGRATION_AND_INFRASTRUCTURE/migrate-to-linux.ps1` |
-| SKL-MAIJ-001 | Unified Roblox Game Architecture Skill | Skills & Automation | 1.1 | VALIDATED | `03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture/` |
-| SKL-MAIJ-001-A | Skill Package Archive | Skills & Automation | 1.1 | VALIDATED | `03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture.skill` |
-| REG-MAIJ-DOC-001 | Master Document Register (this document) | Summaries & Registers | 1.1 | DRAFT | `04_SUMMARIES_AND_REGISTERS/DOCUMENT_REGISTER.md` |
-| CHG-MAIJ-001 | Changelog | Summaries & Registers | 1.1 | DRAFT | `04_SUMMARIES_AND_REGISTERS/CHANGELOG.md` |
-| MAN-MAIJ-OPS-001 | MAIJ Operations Manual | — | 1.1 | DRAFT | `README.md` |
+| SKL-MAIJ-001 | Unified Roblox Game Architecture Skill | Skills & Automation | 1.2 | VALIDATED | `03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture/` |
+| SKL-MAIJ-001-A | Skill Package Archive | Skills & Automation | 1.2 | VALIDATED | `03_SKILLS_AND_AUTOMATION/unified-roblox-game-architecture.skill` |
+| REG-MAIJ-DOC-001 | Master Document Register (this document) | Summaries & Registers | 1.2 | DRAFT | `04_SUMMARIES_AND_REGISTERS/DOCUMENT_REGISTER.md` |
+| CHG-MAIJ-001 | Changelog | Summaries & Registers | 1.2 | DRAFT | `04_SUMMARIES_AND_REGISTERS/CHANGELOG.md` |
+| MAN-MAIJ-OPS-001 | MAIJ Operations Manual | — | 1.2 | DRAFT | `README.md` |
 
 ---
 
 ## Document Summaries (for the New Administrator)
 
-### SOP-MAIJ-CC-001 — Cold-Chain Standard Operating Procedure
-**Summary:** Governs temperature control for perishable food and inspected meat in autonomous drone transport: required temperatures by product class (meat 33–40 °F, TCS produce 33–41 °F, whole produce 45–55 °F), pre-flight gel-pack cooling, continuous digital data-logging, 60-minute maximum flight budgets, delivery-acceptance signatures retained three years, and daily sanitization logs — designed to satisfy NC Department of Agriculture meat-inspection and county health-department oversight.
+### SOP-MAIJ-CC-001 — Cold-Chain SOP
+**Summary:** Temperature control for inspected meat (33–40 °F) and produce in drone transport, pre-flight gel-pack cooling, continuous digital logging, 60-minute flight budgets, delivery signatures retained three years, for NC meat-inspection compliance.
 
-### AD-MAIJ-BUS-001 — NC Entity Formation & Business Foundations Guide
-**Summary:** The administrative path to forming MAIJ as a North Carolina single-member LLC: name-availability check, registered agent (usable while based in Germany), $125 online filing, free IRS EIN, single-member operating agreement, business banking, insurance quotation request (send Q1 2027), MAIJ wordmark filing ($75/class), and the recommendation to base the venture in the Raleigh/Durham/Greensboro corridor when the CBYX fellowship ends in June 2027.
+### AD-MAIJ-BUS-001 — Entity Formation Guide
+**Summary:** Administrative path to MAIJ NC LLC formation, EIN, registered agent usable from Germany, banking, insurance request, and wordmark filing.
 
-### GAP-MAIJ-2026-001 — One-Year Overlooked-Items & Risk Register
-**Summary:** Prioritizes ten areas the simulation-centric plan currently leaves untouched: physical hardware procurement, FAA filing clocks (Part 108/107/135), cold-chain compliance, "Costlo" trademark risk, the June 2027 CBYX transition, player-data governance, entity/banking/insurance foundations, sim-to-real transfer validation, solo-scope discipline, and school outreach — each with severity, owner, target quarter, and first deliverable.
+### GAP-MAIJ-2026-001 — One-Year Gap Register
+**Summary:** Prioritizes ten untouched areas (hardware, FAA clocks, cold chain, CBYX transition, etc.) with severities, owners, target quarters, and first deliverables.
 
-### PLN-MAIJ-STR-001 — Micro-Term Roadmap: Language Game → Costlo
-**Summary:** A 24-week phased plan sequencing a language-learning mechanic, a North Carolina food-delivery route simulator, rate-model mathematics, and the unified Costlo warehouse simulator, with data contracts between modules and a decision matrix between micro-to-macro and macro-to-micro build orders.
+### MAN-MAIJ-OPS-002 — Flight Operations Manual (skeleton)
+**Summary:** Part 135 BVLOS GOM skeleton: organization, crew standards, dispatch/flight-following, DAA with human-equivalent safety, encrypted-C2 link resiliency, Remote Broadcast ID, weather minimums, abnormal/emergency procedures.
 
-### PLN-MAIJ-DATA-001 — Asset Inventory Plan & Data Strategy
-**Summary:** Establishes the eleven-category training-asset taxonomy (`01_3D_and_CAD_Models` through `11_Model_Zoo_and_Benchmarks`), performs an honest short-term and long-term gap analysis against the mission, and defines milestone data priorities so every game module produces datasets that feed the next.
+### CAMP-MAIJ-001 — Maintenance Program (skeleton)
+**Summary:** Airworthiness responsibility, scheduled inspections, battery maintenance with megawatt-charging logs, propeller inspections, MEL, and recordkeeping — with modular handling of the volatile aircraft/battery elements.
 
-### PLN-MAIJ-IT-001 — File-Filtering & Cleanup Strategy
-**Summary:** Defines KEEP and SKIP rules so only necessary files survive the migration, cautions on OneDrive On-Demand placeholders and browser-data export, and maps the eleven-category target layout on external drive F:.
+### TRN-MAIJ-001 — Training Syllabus (skeleton)
+**Summary:** Remote-pilot, dispatcher, and maintenance curricula, simulator-based qualification leveraging MAIJ's own simulation stack, human-factors/CRM training.
 
-### IGD-MAIJ-IT-001 — Windows-to-Linux Migration Guide
-**Summary:** Audits 30+ installed-application classes for Linux compatibility (native, Wine, web, or Windows-only), lists re-download sources and alternatives, provides a pre-migration safety checklist, and recommends Ubuntu 24.04 LTS or Pop!_OS 24.04 LTS for Windows switchers.
+### SMS-MAIJ-001 — Safety Management System Manual (skeleton)
+**Summary:** Part 5-aligned SMS: policy, SRM with BVLOS-specific hazard controls, assurance, promotion, and emergency response plan.
 
-### IGD-MAIJ-IT-002 — Ubuntu 24.04 LTS Dual-Boot Guide
-**Summary:** Step-by-step installation with Rufus bootable USB, vendor boot keys, partition shrinking, the safe "Install alongside Windows" procedure, and the first-boot package checklist.
+### PLN-MAIJ-STR-001 — Micro-Term Roadmap
+**Summary:** 24-week plan from language game to Costlo simulator, with the macro-to-micro decision matrix and Costlo waste-rate KPI patterns.
 
-### IGD-MAIJ-IT-003 — Pop!_OS 24.04 LTS (NVIDIA) Setup Guide
-**Summary:** Dedicated guide for the user's chosen Linux GUI: NVIDIA ISO installation, driver verification, Roblox Studio through Vinegar (with the Roblox Player/Byfron limitation clearly stated), developer toolchain, and the bridge to the custom GUI project.
+### PLN-MAIJ-DATA-001 — Asset Inventory Plan
+**Summary:** 11-category taxonomy, short/long-term gap analysis against the dual mission, milestone data priorities.
 
-### PLN-MAIJ-UI-001 — Future Custom GUI Roadmap
-**Summary:** Architectural roadmap from the Pop!_OS COSMIC starting point through a Tauri MVP dashboard to a native libcosmic operations workstation and eventually a full flight-operations shell, with a technology selection matrix.
+### PLN-MAIJ-IT-001 — File-Filtering Strategy
+**Summary:** KEEP/SKIP rules, OneDrive cautions, drive F: layout.
 
-### TOOL-MAIJ-IT-001 — Migration Audit & Backup Script (`migrate-to-linux.ps1`)
-**Summary:** Automated PowerShell script that inventories installed apps with Linux compatibility tagging, categorizes user files, detects junk, stages MAIJ assets into the eleven categories on drive F:, and safely copies curated documents with Robocopy verification — all pure-ASCII, UTF-8-BOM, CRLF-safe for Windows PowerShell 5.1 and 7.
+### PLN-MAIJ-OPS-001 — Network & Route Operations Plan
+**Summary:** German-train ICE/RE/S-Bahn network, simulated-AI-vector scheduling, farm criteria, vertipad/grid requirements.
 
-### SKL-MAIJ-001 — Unified Roblox Game Architecture Skill
-**Summary:** Reusable Manus skill codifying the unification process: nine-step workflow, flywheel wiring, eleven-category taxonomy, build-order decision matrix, rate-formula toolkit, module-spec and master-plan templates, the plan validator, a cadence playbook derived from the founder's weekly Soul Vault library development cadence, and a verified founder context corpus with sourced MAIJ mission wording, drone economics, FAA rules, and NC geography. Validated under official skill-creator rules.
+### IGD-MAIJ-IT-001 — Migration Guide | IGD-MAIJ-IT-002 — Ubuntu Dual-Boot Guide | IGD-MAIJ-IT-003 — Pop!_OS Setup Guide
+**Summary:** The complete workstation lifecycle: application audit and redownload list, dual-boot install, and your chosen Pop!_OS (NVIDIA) GUI with Vinegar/Roblox Studio.
+
+### PLN-MAIJ-UI-001 — Custom GUI Roadmap
+**Summary:** Tauri MVP → libcosmic workstation → flight-ops shell, with technology selection matrix.
+
+### TOOL-MAIJ-IT-001 — Migration Script | SKL-MAIJ-001 — Roblox Skill
+**Summary:** The PowerShell audit/copy tool and the reusable, validated unification skill (v1.2) with cadence playbook and verified founder context corpus.
 
 ---
 
 ## 3. Maintenance Rules
 
-1. Every document must carry the standard header block (ID, title, category, effective date, version, owner, status, summary).
-2. The register is the single source of truth for document IDs; retire IDs to the changelog rather than reusing them.
-3. Versioning follows `1.0 (Draft)` → `1.1` (minor corrections) → `2.0` (material scope changes).
-4. Review this register quarterly against the CBYX calendar (November 2026, February 2027, May 2027, August 2027).
+1. Every document must carry the standard header block. 2. The register is the single source of truth for document IDs. 3. Versioning: 1.0 (Draft) → 1.x (minor) → 2.0 (scope change). 4. Review quarterly against the CBYX calendar.

@@ -1,17 +1,24 @@
 # MAIJ Documentation — Changelog
 
-Document identifier: **CHG-MAIJ-001** · Version 1.1 (Draft) · 2026-11-09
+Document identifier: **CHG-MAIJ-001** · Version 1.2 (Draft) · 2026-11-09
+
+## 2026-11-09 — Part 135 Compliance Frameworks & Network Plan (v1.2)
+
+* Added four Part 135 compliance frameworks under `00_REGULATORY_FRAMEWORK/`: Flight Operations Manual (MAN-MAIJ-OPS-002), Continuous Airworthiness Maintenance Program (CAMP-MAIJ-001), Training Syllabus (TRN-MAIJ-001), and Safety Management System Manual (SMS-MAIJ-001).
+* Added the German-train network operations plan (PLN-MAIJ-OPS-001) under `01_STRATEGY_AND_ROADMAPS/` with ICE/RE/S-Bahn stop mapping, simulated AI vectors, and vertipad/grid requirements.
+* Updated PLN-MAIJ-STR-001 and PLN-MAIJ-DATA-001 to v1.1 with the refined dual mission, load-profile economics, network tiers, and Costlo waste-rate KPI patterns.
+* Updated founder-context-maij.md with the full corpus; re-validated SKL-MAIJ-001 (v1.2) and re-packaged the skill archive.
+* Updated Document Register and README to v1.2 — 21 filed documents total.
 
 ## 2026-11-09 — FAA-Style Documentation Release (v1.1)
 
-* Re-validated SKL-MAIJ-001 (`unified-roblox-game-architecture`) after enriching it with the full founder context corpus distilled from all tasks (verified MAIJ mission wording, drone economics with provenance flags, FAA Part 107/135/108 rules, NC food-safety law, education pipeline ethics, Pop!_OS/COSMIC GUI decision).
-* Added `references/founder-context-maij.md` (verified factual corpus) and `references/cadence-patterns.md` (weekly bounded-task playbook derived from the Wayfarer's Light "Soul Vault Library Roadmap" cadence and G0-style evidence gates).
-* Updated Document Register to v1.1 and README to v1.1; re-packaged skill archive.
+* Re-validated SKL-MAIJ-001 after enriching it with the founder context corpus (mission, economics, FAA rules, NC facts).
+* Added `founder-context-maij.md` and `cadence-patterns.md`.
 
 ## 2026-11-09 — Initial FAA-Style Documentation Release (v1.0)
 
-* Created the `maij/` folder structure under `SpaceGott/MAIJ` with four operational categories: Regulatory Framework, Strategy & Roadmaps, Migration & Infrastructure, Skills & Automation, plus Summaries & Registers.
-* Filed fifteen initial documents (SOP-MAIJ-CC-001 through MAN-MAIJ-OPS-001), each with an FAA-style identifier, header block, and new-administrator summary.
-* Imported the reusable skill `unified-roblox-game-architecture` (SKL-MAIJ-001) with references, templates, and the plan validator.
-* Fixed TOOL-MAIJ-IT-001 (`migrate-to-linux.ps1`) for encoding, PowerShell parser, and HTML generation issues; pre-created all eleven MAIJ category folders in the copy stage.
-* Added Pop!_OS 24.04 LTS (NVIDIA) and future custom GUI documentation reflecting the user's GUI decisions.
+* Created the `maij/` folder structure under `SpaceGott/MAIJ` with four operational categories plus summaries.
+* Filed fifteen initial documents with FAA-style identifiers, header blocks, and summaries.
+* Imported the reusable skill `unified-roblox-game-architecture` (SKL-MAIJ-001).
+* Fixed TOOL-MAIJ-IT-001 (`migrate-to-linux.ps1`).
+* Added Pop!_OS 24.04 LTS (NVIDIA) and future custom GUI documentation.
